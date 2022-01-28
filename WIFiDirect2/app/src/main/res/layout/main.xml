@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <Button-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/atn_direct_enable"-->
+<!--            android:text="Wifi Enable"-->
+<!--            android:layout_weight="1"/>-->
+
+        <Button
+            android:id="@+id/atn_direct_discover"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Wifi Discover" />
+
+        <Button
+            android:id="@+id/atn_direct_enable"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+          android:layout_weight="1"
+            android:text="Scanner" />
+
+        <Button
+            android:id="@+id/idEdt"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="Client" />
+
+    </LinearLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/idEdt"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/idIVQrcode"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:autofillHints=""-->
+<!--        android:hint="@string/enter_your_info"-->
+<!--        android:inputType="text" />-->
+
+    <!--Button for creating a QR code-->
+
+    <TextView
+        android:id="@+id/plain_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+<!--    <Button-->
+<!--        android:text="send"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/startToEnd"-->
+<!--        />-->
+
+    <ImageView
+        android:id="@+id/idIVQrcode"
+        android:layout_width="296dp"
+        android:layout_height="242dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/qr_code" />
+
+    <Button
+        android:id="@+id/atn_direct_enabl"
+        android:layout_width="178dp"
+        android:layout_height="66dp"
+        android:text="Server" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <fragment
+            android:id="@+id/frag_list"
+            class="com.example.android.wifidirect.DeviceListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="2dp">
+            <!-- Preview: layout=@layout/row_devices -->
+
+        </fragment>
+
+        <fragment
+            class="com.example.android.wifidirect.DeviceDetailFragment"
+            android:id="@+id/frag_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Preview: layout=@layout/device_detail -->
+
+        </fragment>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_server"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/connect_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="68dp"
+        android:onClick="onClick"
+        android:text="Connect to server" />
+
+    <EditText
+        android:id="@+id/edMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/connect_server"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="5dp"
+        android:text="Message from Client" />
+
+    <ScrollView
+        android:layout_width="376dp"
+        android:layout_height="112dp"
+        android:layout_above="@+id/send_data"
+        android:layout_below="@+id/edMessage"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="81dp">
+
+
+        <LinearLayout
+            android:id="@+id/msgList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/txt_path"
+        android:layout_width="345dp"
+
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/send_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="124dp"
+        android:onClick="onClick"
+        android:text="Send Message to server"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_fileclicker"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="76dp"
+        android:onClick="onClick"
+        android:text="File Select"
+
+        />
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_sender"-->
+<!--        android:layout_width="148dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="12dp"-->
+<!--        android:onClick="onClick"-->
+<!--        android:text="Sender"-->
+
+<!--        />-->
+
+</RelativeLayout>
